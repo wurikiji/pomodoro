@@ -8,6 +8,8 @@ environment:
 
 dependencies:
   dio: ^5.8.0+1
+  drift: ^2.28.1
+  drift_flutter: ^0.2.5
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.2
@@ -30,6 +32,7 @@ dev_dependencies:
   mocktail: ^1.0.4
   rename_app: ^1.6.5
   change_app_package_name: ^1.5.0
+  drift_dev: ^2.28.1
 
 flutter:
   uses-material-design: true
