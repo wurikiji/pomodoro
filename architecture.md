@@ -19,10 +19,6 @@ lib/
 │   │   ├── data/           # Data Sources (network client)
 │   │   ├── repositories/   # Repository Implementations
 │   │   └── services/       # External Services (Logging, Analytics)
-│   └── ui/                 # Core Presentation Layer
-│       ├── pages/          # Global Pages (Splash, Error)
-│       ├── view_models/    # Global ViewModels
-│       └── widgets/        # Global Widgets
 ├── shared/                 # Shared UI components, ViewModels, utils
 │   ├── widgets/            # Reusable Widgets (Buttons, Dialogs)
 │   ├── view_models/        # Base/Shared ViewModels
@@ -33,6 +29,9 @@ lib/
 │       ├── application/    # Application Layer
 │       ├── infrastructure/ # Infrastructure Layer
 │       └── ui/             # Presentation Layer
+│           ├── pages/      # Page level widgets
+│           ├── widgets/    # Component level widgets
+│           └── view_models/# ViewModel
 ├── config/                 # Dependency Injection & Environment
 │   └── dependencies/       # DI Setup
 ├── routing/                # Navigation Definitions
@@ -62,7 +61,7 @@ flowchart LR
 | `core/domain/`, `features/*/domain/`                 | Enterprise Business Rules                 | Model                   |
 | `core/application/`, `features/*/application/`       | Application Business Rules                | UseCase                 |
 | `core/infrastructure/`, `features/*/infrastructure/` | Frameworks & Drivers                      | N/A                     |
-| `core/ui/`, `features/*/ui/`                         | Interface Adapters (Controller/Presenter) | View + ViewModel        |
+| `features/*/ui/`                                     | Interface Adapters (Controller/Presenter) | View + ViewModel        |
 | `shared/`                                            | Cross-cutting UI/Helpers                  | Shared Views/ViewModels |
 
 ---
